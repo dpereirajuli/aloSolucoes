@@ -5,14 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alô Soluções</title>
 
+    
+    <!--Link Css all's-->
     <link rel="stylesheet" href="/css/root.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/slide.css">
+    <link rel="stylesheet" href="/css/formulario.css">
+    <link rel="stylesheet" href="/css/footer.css">
     
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!--Link font usada-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 
 </head>
@@ -75,6 +83,8 @@
         </div>
     </section>
 
+    
+    <!--js abre o nav mobile e fecha o nav desktop-->
     <script>
         function toggleMenu() {
             const navbar = document.querySelector('.navbar');
@@ -84,77 +94,135 @@
 
 
 
-<!---aqui começa o código do texto com um carrosel de imagens ***AJUSTAR NOMECLATURA DEPOIS-->
-<div class="container">
-    <div class="text-content">
-        <p style="background-color: #fee2e2; display: inline-block; padding: 5px 10px; border-radius: 5px; color: #f97316;">Solicitação 100% online</p>
-        <h1>Como antecipar meu Saque-Aniversário no Bmg?</h1>
-        <p>É só baixar o app FGTS em seu dispositivo móvel. Entre no aplicativo para fazer o login ou criar uma conta caso ainda não tenha.</p>
-        <p><strong>É rápido, fácil e sem burocracia:</strong></p>
-        <div class="steps">
-            <p><span>1.</span> Optar pelo Saque-Aniversário.</p>
-            <p><span>2.</span> Autorizar o banco a consultar seus dados e valores do FGTS.</p>
-            <p><span>3.</span> Simular e, se estiver de acordo, aguardar aprovação.</p>
-            <p><span>4.</span> Dinheiro na conta para usar como quiser.</p>
+    <!---aqui começa o código do texto com um carrosel de imagens-->
+    <div class="section-carrossel">
+        <div class="text-content">
+            <p style="background-color: #fee2e2; display: inline-block; padding: 5px 10px; border-radius: 20px; color: #f97316;">Solicitação 100% online</p>
+            <h1>Como antecipar meu Saque-Aniversário no Bmg?</h1>
+            <p>É só baixar o app FGTS em seu dispositivo móvel. Entre no aplicativo para fazer o login ou criar uma conta caso ainda não tenha.</p>
+            <p><strong>É rápido, fácil e sem burocracia:</strong></p>
+            <div class="steps">
+                <p><span>1.</span> Optar pelo Saque-Aniversário.</p>
+                <p><span>2.</span> Autorizar o banco a consultar seus dados e valores do FGTS.</p>
+                <p><span>3.</span> Simular e, se estiver de acordo, aguardar aprovação.</p>
+                <p><span>4.</span> Dinheiro na conta para usar como quiser.</p>
+            </div>
+            <a href="#" class="button">Simular antecipação FGTS</a>
         </div>
-        <a href="#" class="button">Simular antecipação FGTS</a>
+
+        <div class="slider">
+            <img src="img/step-1.png" alt="Slide 1">
+            <div class="caption">
+                <h2>Acesse o app FGTS</h2>
+                <p>Baixe o app FGTS no seu celular, faça o login com o seu CPF</p>
+            </div>
+            <div class="navigation">
+                <button onclick="prevSlide()">&#10094;</button>
+                <button onclick="nextSlide()">&#10095;</button>
+            </div>
+            <div class="progress-bar">
+                <!-- Progress steps serão gerados dinamicamente pelo JavaScript -->
+            </div>
+        </div>
     </div>
 
-    <div class="slider">
-        <img src="img/step-1.png" alt="Slide 1">
-        <div class="caption">
-            <h2>Acesse o app FGTS</h2>
-            <p>Baixe o app FGTS no seu celular, faça o login com o seu CPF</p>
+    <!-- Formulário de Contato dai tu faz algo parecido e enfeita de frufru -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2>Fazer simulação</h2>
+            <form id="contact-form">
+                <input type="text" id="nome" placeholder="Seu Nome" required>
+                <input type="email" id="email" placeholder="Seu E-mail" required>
+                <input type="tel" id="telefone" placeholder="Seu Telefone" required>
+                <input type="text" id="cpf" placeholder="Seu CPF" required>
+                
+                <!-- Checkbox de Termos de Uso -->
+                <div class="termos-uso">
+                    <input type="checkbox" id="termos" required>
+                    <label for="termos">Li e aceito os <a href="#modal-termos" class="abrir-modal">Termos de Uso</a>.</label>
+                </div>
+    
+                <button type="submit">Enviar</button>
+            </form>
         </div>
-        <div class="navigation">
-            <button onclick="prevSlide()">&#10094;</button>
-            <button onclick="nextSlide()">&#10095;</button>
+    
+        <!-- Modal de Termos de Uso -->
+        <div id="modal-termos" class="modal">
+            <div class="modal-conteudo">
+                <span class="fechar-modal">&times;</span>
+                <h2>Termos de Uso</h2>
+                <p>
+                    Aqui vai o conteúdo dos termos de uso. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Nullam scelerisque ipsum vitae justo tincidunt, nec tincidunt nisi tincidunt. 
+                    Vivamus euismod, nisi nec tincidunt tincidunt, nisi nisi tincidunt nisi, nec tincidunt nisi nisi nec nisi.
+                </p>
+                <p>
+                    Aqui vai o conteúdo dos termos de uso. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Nullam scelerisque ipsum vitae justo tincidunt, nec tincidunt nisi tincidunt. 
+                    Vivamus euismod, nisi nec tincidunt tincidunt, nisi nisi tincidunt nisi, nec tincidunt nisi nisi nec nisi.
+                </p>
+            </div>
         </div>
-    </div>
-</div>
-
-<script>
-    const slides = [
-    { image: "img/step-1.png", title: "Acesse o app FGTS", text: "Baixe o app FGTS no seu celular, faça o login com o seu CPF." },
-    { image: "img/step-2.png", title: "Aderir ao Saque-Aniversário", text: "Após fazer o login, clique em 'Sistemática de saque do seu FGTS'." },
-    { image: "img/step-3.png", title: "Modalidade Saque-Aniversário", text: "Escolha a opção 'Modalidade Saque-Aniversário', marque os termos e clique em 'Optar pelo Saque-Aniversário'." },
-    { image: "img/step-4.png", title: "Autorizar consulta FGTS", text: "Na tela inicial, clique em 'Sistemática de saque do seu FGTS', depois 'Empréstimo Saque-aniversário' e então 'Autorizar consulta de dados'." },
-    { image: "img/step-6.png", title: "Adicionar instituição financeira", text: "Clique em 'Adicionar instituição +', busque e selecione o 'QI SOCIEDADE e DELCRED SOCIEDADE'." },
-    { image: "img/step-6.png", title: "Adicionar instituição financeira", text: "Clique em 'Adicionar instituição +', busque e selecione o 'QI SOCIEDADE e DELCRED SOCIEDADE'." }
-
-];
-
-    let currentIndex = 0;
-    const sliderImage = document.querySelector(".slider img");
-    const sliderTitle = document.querySelector(".slider .caption h2");
-    const sliderText = document.querySelector(".slider .caption p");
-
-    function showSlide(index) {
-        currentIndex = (index + slides.length) % slides.length;
-        sliderImage.style.opacity = 0;
-
-        setTimeout(() => {
-            sliderImage.src = slides[currentIndex].image;
-            sliderTitle.textContent = slides[currentIndex].title;
-            sliderText.textContent = slides[currentIndex].text;
-            sliderImage.style.opacity = 1;
-        }, 500);
-    }
-
-    function nextSlide() {
-        showSlide(currentIndex + 1);
-    }
-
-    function prevSlide() {
-        showSlide(currentIndex - 1);
-    }
-</script>
+    </section>
 
 
-<!---aqui pode ser o forms inicio-->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Seção de Informações da Empresa -->
+            <div class="footer-section about">
+                <h3 class="footer-logo">Alô Soluções Financeiras</h3>
+                <p class="footer-description">
+                    Transformando sua vida financeira com soluções inteligentes e personalizadas.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Links Úteis -->
+            <div class="footer-section links">
+                <h4 class="footer-title">Links Úteis</h4>
+                <ul class="footer-list">
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#politica">Política de Privacidade</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contato -->
+            <div class="footer-section contact">
+                <h4 class="footer-title">Contato</h4>
+                <ul class="footer-list">
+                    <li><i class="fas fa-map-marker-alt"></i> Rua Exemplo, 123 - São Paulo, SP</li>
+                    <li><i class="fas fa-phone"></i> (11) 1234-5678</li>
+                    <li><i class="fas fa-envelope"></i> contato@alosolucoes.com.br</li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Rodapé Inferior -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Alô Soluções Financeiras. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-<!---script carrosel de imagens AJUSTAR NOMECLATURA DEPOIS-->
-<script src="script.js"></script>
+
+    <!-- All's Js -->
+    <script src="/js/section-carrossel.js" defer></script>
+    <script src="/js/envia_form.js" defer></script>
 
 
 </body>

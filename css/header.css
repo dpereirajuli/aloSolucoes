@@ -1,14 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #121212;
+
     color: #ffffff;
+    background-color: var(--roxo-escuro);
 }
 
 header {
@@ -17,8 +13,11 @@ header {
     align-items: center;
     padding: 1rem 2rem;
     background-color: var(--roxo-escuro);
+    line-height: 1.5;
 }
 
+
+/**inicio navbar**/
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
@@ -52,6 +51,8 @@ nav a:hover {
     transform: scale(1.05);
 }
 
+
+/**btn cta dentro da nav bar**/
 .cta-buttons {
     display: flex;
     gap: 1rem;
@@ -89,50 +90,151 @@ nav a:hover {
 
 
 
-
-
+/**inicio hero content**/
 .hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 2rem;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    color: #fff;
+    overflow: hidden;
+    position: relative;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    animation: fadeInDown 1s ease-out;
 }
 
 .hero h1 span {
     color: var(--laranja);
+    animation: colorChange 3s infinite alternate;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+    animation: fadeInUp 1s ease-out;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 1rem;
-    justify-content: start;
+    gap: 1.5rem;
+    justify-content: center;
+    animation: fadeInUp 1.5s ease-out;
 }
 
+.hero-buttons a {
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/**btn ctz dentro da hero content**/
+.cta-primary {
+    background-color: var(--laranja);
+    color: #fff;
+    border: 2px solid var(--laranja);
+}
+
+.cta-primary:hover {
+    background-color: transparent;
+    color: var(--laranja);
+}
+
+.cta-secondary {
+    background-color: transparent;
+    color: var(--laranja);
+    border: 2px solid var(--laranja);
+}
+
+.cta-secondary:hover {
+    background-color: var(--laranja);
+    color: #fff;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: var(--laranja);
+    }
+    50% {
+        color: #ff8c42;
+    }
+    100% {
+        color: var(--laranja);
+    }
+}
+
+
+
+
+
+/**inicio serviços**/
 .features {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    padding: 2rem;
+    padding: 4rem 2rem;
+    background-color: #1a1a1a;
 }
 
 .feature {
-    background-color: #1a1a1a;
-    border-radius: 10px;
-    padding: 1.5rem;
+    background-color: #2a2a2a;
+    border-radius: 15px;
+    padding: 2rem;
     width: 300px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -164,9 +266,10 @@ nav a:hover {
 
 
 @media (min-width: 768px) {
+
     .hero {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
         text-align: left;
     }
 
@@ -176,7 +279,7 @@ nav a:hover {
 
     .hero-image {
         margin-top: 0;
-        max-width: 50%;
+        max-width: 40%;
     }
 
     .hamburger {
@@ -214,8 +317,23 @@ nav a:hover {
     .hamburger {
         display: block;
     }
+    
+    header{
+        line-height: 1;
+    }
+
+    .hero h1 {
+        font-size:2rem;
+        margin-bottom: 10px;
+    }
 
     .hero-buttons {
         justify-content: space-around;
+    }
+
+    .hero-buttons a{
+        font-size: 0.8rem;
+        padding: 0.8rem 1rem;
+        border-radius: 15px;
     }
 }
