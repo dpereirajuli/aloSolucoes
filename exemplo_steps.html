@@ -1,0 +1,170 @@
+<link rel="stylesheet" href="/css/formulario.css">
+<!-- Formulário de Contato -->
+<section id="contato" class="contact">
+    <div class="container" id="form-container">
+        <h2>Antecipar FGTS Agora</h2>
+        <p>Não se preocupe. Seus dados estão seguros e serão utilizados para criar uma experiência personalizada pra você</p><br>
+        
+        <!-- Barra de Progresso -->
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        
+        <form id="contact-form" action="https://formsubmit.co/mateushleccese@gmail.com" method="post">
+            <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+            <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+            <input type="tel" id="telefone" name="telefone" placeholder="Seu Telefone" required>
+            <input type="text" id="cpf" name="cpf" placeholder="Seu CPF" required>
+            
+            <!-- Checkbox de Termos de Uso -->
+            <div class="termos-uso">
+                <input type="checkbox" id="termos">
+                <label for="termos">Li e aceito os <a href="#modal-termos" class="abrir-modal">Termos de Uso</a>.</label>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Segunda etapa -->
+    <div class="container next-step" id="next-step">
+        <h2>Próximo Passo</h2>
+        <p>Obrigado por enviar seus dados! Agora, siga as próximas instruções.</p>
+    </div>
+
+    <!-- Modal de Termos de Uso -->
+    <div id="modal-termos" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar-modal">&times;</span>
+            <h2>Termos de Uso</h2>
+            <p>Aqui vai o conteúdo dos termos de uso.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Estilos para o formulário e container */
+#contato .container {
+    background: rgba(244, 235, 235, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 50%;
+    margin: auto;
+    padding: 50px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Barra de progresso */
+.progress-bar-container {
+    width: 100%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: cadetblue;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+/* Estilos para a próxima etapa */
+.container.next-step {
+    display: none;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.container.show-next {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Estilos para o formulário */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contact-form input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact-form button {
+    padding: 0.8rem;
+    background: var(--laranja);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#contact-form button:hover {
+    background: #ff8c42;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contact-form");
+    const inputs = form.querySelectorAll("input:not([type=submit])");
+    const progressBar = document.getElementById("progress-bar");
+    const formContainer = document.getElementById("form-container");
+    const nextStep = document.getElementById("next-step");
+
+    function updateProgress() {
+        let filledFields = 0;
+        inputs.forEach(input => {
+            if ((input.type === "checkbox" && input.checked) || (input.type !== "checkbox" && input.value.trim() !== "")) {
+                filledFields++;
+            }
+        });
+        const progress = (filledFields / inputs.length) * 100;
+        progressBar.style.width = progress + "%";
+    }
+
+    inputs.forEach(input => {
+        input.addEventListener("input", updateProgress);
+        input.addEventListener("change", updateProgress);
+    });
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita o envio real para demonstração
+
+        // Animação de saída do formulário
+        formContainer.style.opacity = "0";
+        formContainer.style.transform = "translateX(-100%)";
+
+        // Aguarda a animação terminar antes de ocultar o formulário
+        setTimeout(() => {
+            formContainer.style.display = "none";
+
+            // Exibe a próxima etapa com animação
+            nextStep.style.display = "block";
+            setTimeout(() => {
+                nextStep.style.opacity = "1";
+                nextStep.style.transform = "translateX(0)";
+            }, 10); // Pequeno delay para garantir que o display: block seja aplicado antes da animação
+        }, 500); // Tempo correspondente à duração da animação
+    });
+
+    updateProgress(); // Inicializar progresso corretamente
+});
+</script>

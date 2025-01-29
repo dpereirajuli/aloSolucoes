@@ -172,7 +172,8 @@
     .section-carrossel {
         flex-direction: column;
         text-align: center;
-        padding: 15px;
+        padding: 10px;
+        margin: 50px 5%;
     }
 
     .text-content {
@@ -189,6 +190,6 @@
     }
 
     .slider img {
-        max-height: 90%;
+        max-height: 85%;
     }
 }

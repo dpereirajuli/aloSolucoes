@@ -3,6 +3,18 @@
     padding: 4rem 0;
 }
 
+#contato .container{
+    background: rgba( 244, 235, 235, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 50%;
+    margin: auto;
+    padding: 50px;
+}
+
 .contact h2 {
     text-align: center;
     margin-bottom: 2rem;
@@ -50,7 +62,7 @@
 
 .termos-uso label {
     font-size: 0.9rem;
-    color: #333;
+    color: white;
 }
 
 .termos-uso a {
