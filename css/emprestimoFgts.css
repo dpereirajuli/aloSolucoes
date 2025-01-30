@@ -1,0 +1,54 @@
+/* Estilos da seção Empréstimo FGTS */
+.emprestimo-fgts {
+    background-color: #f9f9f9; /* Fundo claro */
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.emprestimo-fgts .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.emprestimo-fgts h2 {
+    font-size: 2.5rem;
+    color: var(--laranja); /* Cor escura para o título */
+    margin-bottom: 1rem;
+}
+
+.emprestimo-fgts .taxa {
+    font-size: 1.5rem;
+    color: black; /* Cor destacada para a taxa */
+    margin-bottom: 1.5rem;
+}
+
+.emprestimo-fgts .descricao {
+    font-size: 1.2rem;
+    color: #333; /* Cor do texto principal */
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.emprestimo-fgts .observacao {
+    font-size: 0.9rem;
+    color: #777; /* Cor mais suave para o texto secundário */
+    margin-bottom: 2rem;
+}
+
+.emprestimo-fgts .btn-contratar {
+    background-color: var(--roxo); /* Azul chamativo */
+    color: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.emprestimo-fgts .btn-contratar:hover {
+    background-color: var(--roxo-claro); /* Azul mais escuro no hover */
+}

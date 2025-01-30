@@ -1,0 +1,76 @@
+.faq {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+}
+
+.faq h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+.accordion {
+    width: 100%;
+    text-align: left;
+    padding: 1.2rem;
+    border: none;
+    background: #f0f4f8;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.accordion:hover {
+    background: #e0e8f0;
+}
+
+.arrow {
+    font-size: 0.8rem;
+    transition: transform 0.3s;
+}
+
+.resposta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s linear;
+    padding: 0 1.2rem;
+    background: white;
+    border-radius: 0 0 6px 6px;
+}
+
+/* Ajuste para evitar travamento */
+.faq-item.active .resposta {
+    max-height: 200px; /* Valor maior para acomodar conteúdo variável */
+    padding: 1rem 1.2rem;
+    transition: max-height 0.1s linear; /* Transição mais suave */
+}
+
+.resposta p {
+    padding: 1rem 0;
+}
+
+/* Classe ativa quando aberto */
+.faq-item.active .arrow {
+    transform: rotate(180deg);
+}
+
+.faq-item.active .resposta {
+    max-height: 700px; /* Ajuste conforme necessário */
+    padding: 1rem 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .faq {
+        padding: 1rem;
+    }
+
+    .accordion {
+        font-size: 0.9rem;
+    }
+}
