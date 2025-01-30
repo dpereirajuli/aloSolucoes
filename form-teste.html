@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: sans-serif;
         }
 
         body,
@@ -23,9 +24,14 @@
             height: 100vh;
         }
 
+        .container p {
+            text-align: center;
+        }
+
         .imagem {
             width: 45%;
-            background: url(https://img.freepik.com/vetores-gratis/papel-de-parede-geometrico-de-design-grafico_52683-34399.jpg) no-repeat center center;
+            background: url('esq-img.png') no-repeat center center;
+            background-size: 10 0%;
             background-size: cover;
         }
 
@@ -116,7 +122,7 @@
         .progress-bar {
             height: 100%;
             width: 0%;
-            background: cadetblue;
+            background: var(--roxo-escuro);
             border-radius: 5px;
             transition: width 0.5s ease;
         }
