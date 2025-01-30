@@ -1,6 +1,9 @@
 /* Estilos do Formulário */
-#contato {
-    padding: 4rem 0;
+.campo-contato {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 #contato .container{
