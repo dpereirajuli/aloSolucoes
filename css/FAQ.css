@@ -2,6 +2,7 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
+    margin: 10em;
     font-family: Arial, sans-serif;
 }
 
@@ -9,6 +10,7 @@
     text-align: center;
     color: #2c3e50;
     margin-bottom: 2rem;
+    margin-bottom: 2em;
 }
 
 .accordion {
@@ -44,21 +46,37 @@
     border-radius: 0 0 6px 6px;
 }
 
-/* Ajuste para evitar travamento */
+#documentos-faq {
+    padding: 1em;
+}
+
+#documentos-faq li {
+    padding: 0.3em;
+}
+
+/* Ajuste para melhorar a transição */
+/* Ajuste para melhorar a transição */
+.faq-item .resposta {
+    transform: scaleY(0); /* Inicialmente "fechado" */
+    transform-origin: top; /* Alinha a transição de cima para baixo */
+    overflow: hidden;
+    transition: transform 0.3s ease, padding 0.3s ease;
+    padding: 0 1.2rem;
+    background: white;
+    border-radius: 0 0 6px 6px;
+}
+
+/* Classe ativa (aberta) */
 .faq-item.active .resposta {
-    max-height: 200px; /* Valor maior para acomodar conteúdo variável */
+    transform: scaleY(1); /* Abre a resposta */
     padding: 1rem 1.2rem;
-    transition: max-height 0.1s linear; /* Transição mais suave */
 }
 
-.resposta p {
-    padding: 1rem 0;
-}
-
-/* Classe ativa quando aberto */
+/* Modificação para a rotação da seta */
 .faq-item.active .arrow {
     transform: rotate(180deg);
 }
+
 
 .faq-item.active .resposta {
     max-height: 700px; /* Ajuste conforme necessário */
