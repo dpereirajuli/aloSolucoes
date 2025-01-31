@@ -1,20 +1,26 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("contact-form");
-    const inputs = form.querySelectorAll("input:not([type=submit])");
-    const progressBar = document.getElementById("progress-bar");
-    const formContainer = document.getElementById("form-container");
-    const nextStep = document.getElementById("next-step");
+const form = document.getElementById('myForm');
+const inputs = form.querySelectorAll('input'); // Seleciona todos os campos de input
+const progressBar = document.getElementById('progressBar');
 
-    function updateProgress() {
-        let filledFields = 0;
-        inputs.forEach(input => {
-            if ((input.type === "checkbox" && input.checked) || (input.type !== "checkbox" && input.value.trim() !== "")) {
-                filledFields++;
-            }
-        });
-        const progress = (filledFields / inputs.length) * 100;
-        progressBar.style.width = progress + "%";
-    }
+function updateProgressBar() {
+    let filledFields = 0;
+
+    inputs.forEach(input => {
+        if (input.value.trim() !== '') { // Verifica se o campo não está vazio
+            filledFields++;
+        }
+    });
+
+    const progress = (filledFields / inputs.length) * 100; // Calcula o progresso
+    progressBar.style.width = `${progress}%`; // Atualiza a barra de progresso
+}
+
+// Adiciona um evento de input a todos os campos
+inputs.forEach(input => {
+    input.addEventListener('input', updateProgressBar);
+});
+
+
 
     inputs.forEach(input => {
         input.addEventListener("input", updateProgress);
@@ -42,4 +48,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     updateProgress(); // Inicializar progresso corretamente
-});
