@@ -39,7 +39,8 @@
     gap: 1rem;
 }
 
-.social-icon {
+.social-icon,
+.social-icon-disable{
     color: #fff;
     font-size: 1.2rem;
     transition: color 0.3s ease, transform 0.3s ease;
@@ -48,6 +49,15 @@
 .social-icon:hover {
     color: var(--laranja);
     transform: translateY(-3px);
+}
+
+.social-icon-disable {
+    color: #444;
+}
+
+.social-icon-disable:hover {
+    cursor: no-drop;
+    color: #2a2929;
 }
 
 .footer-title {

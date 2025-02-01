@@ -1,8 +1,13 @@
 .faq {
     max-width: 800px;
+    height: 40em;
+    width: 100%;
     margin: 0 auto;
     padding: 2rem;
-    margin: 15em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     font-family: Arial, sans-serif;
 }
 

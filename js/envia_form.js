@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Função para enviar formulário (validação do checkbox)
-document.getElementById('next-step-section').addEventListener('submit', function (e) {
+document.addEventListener('DOMContentLoaded', function () {
+    const btnFinalizar = document.getElementById('btn-finalizar');
 
-
+    btnFinalizar.addEventListener('click', function () {
         // Coletar dados do formulário
         const nome = document.getElementById('nome').value;
         const email = document.getElementById('email').value;
@@ -40,47 +40,11 @@ document.getElementById('next-step-section').addEventListener('submit', function
         // Abrir WhatsApp
         window.open(urlWhatsApp, '_blank');
 
-        // Enviar e-mail (simulação)
-        const assunto = "Nova Simulação - Alô Soluções Financeiras";
-        const corpoEmail = `Nome: ${nome}\nE-mail: ${email}\nTelefone: ${telefone}\nCPF: ${cpf}`;
-        const mailtoLink = `mailto:contato@alosolucoes.com.br?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpoEmail)}`;
+        // Enviar e-mail via FormSubmit
+        const form = document.getElementById('contact-form');
+        form.submit(); // Envia o formulário para o FormSubmit
 
-        // Abrir cliente de e-mail
-       // window.location.href = mailtoLink;
-
-        // Limpar formulário
-        document.getElementById('contact-form').reset();
-
-});
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    const inputs = document.querySelectorAll('#contact-form input'); // Seleciona os inputs do formulário
-    const progressBar = document.getElementById('progress-bar');
-    
-    function atualizarProgresso() {
-        let preenchidos = 0;
-        inputs.forEach(input => {
-            if (input.value.trim() !== '') {
-                preenchidos++;
-            }
-        });
-
-        // Calcula o progresso
-        const progresso = (preenchidos / inputs.length) * 100;
-        progressBar.style.width = `${progresso}%`;
-    }
-
-    // Adiciona o evento de input para cada campo do formulário
-    inputs.forEach(input => {
-        input.addEventListener('input', atualizarProgresso);
-    });
-
-    // Se quiser resetar a barra ao submeter o formulário:
-    document.getElementById('contact-form').addEventListener('submit', function () {
-        setTimeout(() => {
-            progressBar.style.width = '0%';
-        }, 1000);
+        // Limpar formulário (opcional)
+        form.reset();
     });
 });

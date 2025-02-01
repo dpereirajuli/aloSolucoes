@@ -113,6 +113,7 @@ html {
     width: 150%;
 }
 
+
 #contact-form button,
 .btn-finalizar button{
     display: inline-block;
@@ -158,6 +159,12 @@ html {
    #contact-form button:hover span,
    .btn-finalizar button:hover span {
     padding-right: 15px;
+   }
+
+   .btn-finalizar button:hover {
+       animation: 1s linear;
+       transform: translateY(-2px);
+       background-color: #ff8c42;
    }
    
    #contact-form button:hover span:after,
@@ -306,13 +313,13 @@ html {
 .sliders-carousel button.prev {
     left: 10px;
     background-color: var(--laranja);
-    width: 2em;
+    width: 2.2em;
 }
 
 .sliders-carousel button.next {
     right: 10px;
     background-color: var(--laranja);
-    width: 2em;
+    width: 2.2em;
 
 }
 

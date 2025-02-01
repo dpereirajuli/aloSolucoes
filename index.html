@@ -45,7 +45,7 @@
             <a href="#vantagens">Serviços</a>
             <a href="#depoimentos">Saque FGTS</a>
             <a href="#planos">Planos</a>
-            <a href="#contato" class="cta-primary">Simule agora</a>
+            <a href="#contact-form" class="cta-primary">Simule agora</a>
             <a href="#cliente" class="cta-secondary">Área do Cliente</a>
         </nav>
         <div class="hamburger" onclick="toggleMenu()">
@@ -137,9 +137,9 @@
     <!---aqui começa o código do texto com um carrosel de imagens-->
     <div class="section-carrossel">
         <div class="text-content">
-            <p
-                style="background-color: #fee2e2; display: inline-block; padding: 5px 10px; border-radius: 20px; color: #f97316;">
-                Solicitação 100% online</p>
+            <p style="background-color: #fee2e2; display: inline-block; padding: 5px 10px; border-radius: 20px; color: #f97316;">
+                Solicitação 100% online
+            </p>
             <h1>Como antecipar meu Saque-Aniversário ?</h1>
             <p>É só baixar o app FGTS em seu dispositivo móvel. Entre no aplicativo para fazer o login ou criar uma
                 conta caso ainda não tenha.</p>
@@ -152,16 +152,16 @@
             </div>
             <a href="#" class="button">Simular antecipação FGTS</a>
         </div>
-
+    
         <div class="slider">
-            <img src="img/step-1.png" alt="Slide 1">
+            <img src="img/step-1.png" alt="Slide 1" class="slider-image">
             <div class="caption">
-                <h2>Acesse o app FGTS</h2>
-                <p>Baixe o app FGTS no seu celular, faça o login com o seu CPF</p>
+                <h2 class="slider-title">Acesse o app FGTS</h2>
+                <p class="slider-text">Baixe o app FGTS no seu celular, faça o login com o seu CPF</p>
             </div>
             <div class="navigation">
-                <button onclick="prevSlide()">&#10094;</button>
-                <button onclick="nextSlide()">&#10095;</button>
+                <button class="prev-button">&#10094;</button>
+                <button class="next-button">&#10095;</button>
             </div>
             <div class="progress-bar">
                 <!-- Progress steps serão gerados dinamicamente pelo JavaScript -->
@@ -186,12 +186,15 @@
                     </div>
                     
 
-                    <form id="contact-form" action="https://formsubmit.co/mateushleccese@gmail.com" method="post">
+                    <form id="contact-form" action="https://formsubmit.co/mateushleccese@gmail.com?_captcha=false" method="post">
                         <div class="campos-form">
                             <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
                             <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
                             <input type="tel" id="telefone" name="telefone" placeholder="Seu Telefone" required>
                             <input type="text" id="cpf" name="cpf" placeholder="Seu CPF" required>
+
+                            <span class="mensagem-erro" id="cpf-erro telefone-erro email-erro"></span>
+
                             <!-- Checkbox de Termos de Uso -->
                             <div class="terms-section">
                                 <input type="checkbox" id="termos" required>
@@ -288,7 +291,7 @@
                         </div>
 
                         <div class="btn-finalizar">
-                            <button type="submit">
+                            <button id="btn-finalizar">
                                 <span>Finalizar</span>
                             </button>
                         </div>
@@ -398,16 +401,16 @@
                     Transformando sua vida financeira com soluções inteligentes e personalizadas.
                 </p>
                 <div class="footer-social">
-                    <a href="#" class="social-icon" aria-label="Facebook">
+                    <a href="https://www.facebook.com/alomaisssolucoesfinanceira" class="social-icon" aria-label="Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="#" class="social-icon" aria-label="Instagram">
+                    <a href="https://www.instagram.com/alomaisssolucoesfinanceira/" class="social-icon" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                    <a href="" class="social-icon-disable" aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="#" class="social-icon" aria-label="Twitter">
+                    <a href="" class="social-icon-disable" aria-label="Twitter">
                         <i class="fab fa-twitter"></i>
                     </a>
                 </div>
