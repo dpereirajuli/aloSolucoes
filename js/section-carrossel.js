@@ -11,18 +11,11 @@ let currentIndex = 0;
 const sliderImage = document.querySelector(".slider img");
 const sliderTitle = document.querySelector(".slider .caption h2");
 const sliderText = document.querySelector(".slider .caption p");
-const progressBar = document.querySelector(".progress-bar");
 
-// Cria os indicadores da barra de progressão
-slides.forEach((slide, index) => {
-    const step = document.createElement("div");
-    step.classList.add("progress-step");
-    if (index === 0) step.classList.add("active");
-    progressBar.appendChild(step);
-});
+// Remover a referência à barra de progresso
+// const progressBar = document.querySelector(".progress-bar");
 
-const progressSteps = document.querySelectorAll(".progress-step");
-
+// Função para exibir o slide
 function showSlide(index) {
     currentIndex = (index + slides.length) % slides.length;
     sliderImage.style.opacity = 0;
@@ -32,18 +25,10 @@ function showSlide(index) {
         sliderTitle.textContent = slides[currentIndex].title;
         sliderText.textContent = slides[currentIndex].text;
         sliderImage.style.opacity = 1;
-
-        // Atualiza a barra de progressão
-        progressSteps.forEach((step, i) => {
-            if (i === currentIndex) {
-                step.classList.add("active");
-            } else {
-                step.classList.remove("active");
-            }
-        });
     }, 500);
 }
 
+// Funções de navegação
 function nextSlide() {
     showSlide(currentIndex + 1);
 }
@@ -51,3 +36,7 @@ function nextSlide() {
 function prevSlide() {
     showSlide(currentIndex - 1);
 }
+
+// Event listeners para os botões de navegação
+document.querySelector(".next-button").addEventListener("click", nextSlide);
+document.querySelector(".prev-button").addEventListener("click", prevSlide);
