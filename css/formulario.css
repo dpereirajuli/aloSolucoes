@@ -113,14 +113,31 @@ html {
     width: 150%;
 }
 
+@keyframes erroSlide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    75% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 .erro {
     text-align: center;
     color: red;
-    background-color: rgb(230, 169, 169);
-    border-radius: 5em;
+    border-radius: 3em;
     padding: 0.3em;
     font-size: 1em;
-  }
+}
 
 #contact-form button,
 .btn-finalizar button{

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/css/formulario.css">
     <link rel="stylesheet" href="/css/emprestimoFgts.css">
     <link rel="stylesheet" href="/css/FAQ.css">
+    <link rel="stylesheet" href="/css/calculadora.css">
     <!--<link rel="stylesheet" href="/css/cokies.css">-->
     <link rel="stylesheet" href="/css/footer.css">
 
@@ -294,6 +295,29 @@
         </div>
     </div>
 
+        <section class="saque-aniversario">
+                    <div class="calculadora-div">
+                        <h1 class="titulo">Calculadora de Saque-Aniversário FGTS</h1>
+                        
+                        <div class="input-calculadora-div">
+                            <label for="saldo" class="label">Informe seu saldo do FGTS:</label>
+                            <input type="number" id="saldo" class="valorSaldo" placeholder="Digite o saldo em R$">
+                        </div>
+                    
+                        <button class="botao-calcular" onclick="calcularSaque()">Calcular Saque</button>
+                    
+                        <div class="resultado" id="resultado"></div>
+                        <div id="loading">
+                            <p>Calculando...</p>
+                            <div class="barraCarregando" id="barraCarregando"></div>
+                        </div>
+                    </div>
+        
+            <div class="secao-direita">
+                <h1>Para Que Serve a Calculadora de Saque-Aniversário FGTS: </h1>
+                <p>A Calculadora de Saque-Aniversário FGTS é uma ferramenta prática e intuitiva que ajuda você a estimar quanto pode sacar do seu Fundo de Garantia por Tempo de Serviço (FGTS) através da modalidade Saque-Aniversário. Com ela, você insere o saldo disponível na sua conta FGTS e descobre, de forma rápida e clara, o valor aproximado que pode retirar anualmente, conforme as regras estabelecidas pelo governo. Ideal para planejar suas finanças e aproveitar melhor os recursos disponíveis!</p>
+            </div>
+        </section>
     <!-- Faq de perguntas e respostas. -->
     <section class="faq" id="faqs">
         <h2>FAQ - Empréstimo Consignado</h2>
@@ -337,6 +361,7 @@
                 </ul>
             </div>
         </div>
+        
 
         <div class="faq-item">
             <button class="accordion">
@@ -446,6 +471,7 @@
     <script src="/js/barraProgressaoForm.js"></script>
     <script src="/js/section-carrossel.js" defer></script>
     <script src="/js/envia_form.js" defer></script>
+    <script src="/js/calculadora.js"></script>
 
 
 </body>

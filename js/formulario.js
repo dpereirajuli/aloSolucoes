@@ -10,9 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Função para exibir erro geral
     function mostrarErroGeral(mensagem) {
         erroGeral.textContent = mensagem;
+        erroGeral.style.backgroundColor = "#e6a9a9";
         erroGeral.style.display = "block";  // Torna o erro visível
         erroGeral.style.opacity = 1; // Torna o erro opaco
-        erroGeral.style.animation = "erroSlide 0.5s forwards"; // Aplica a animação
+        erroGeral.style.animation = "erroSlide 0.65s forwards"; // Aplica a animação
 
         // Remove a animação depois de 1 segundo (tempo suficiente para ela ser vista)
         setTimeout(() => {

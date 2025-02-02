@@ -1,0 +1,133 @@
+/* Seção Principal */
+.saque-aniversario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50em;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* Container */
+.calculadora-div {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
+    width: 320px;
+    height: 24em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* Título */
+.titulo {
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Campo de Entrada */
+.input-calculadora-div {
+    margin: 15px 0;
+}
+
+.label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.valorSaldo {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botão */
+.botao-calcular {
+    background-color: var(--laranja);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.botao-calcular:hover {
+    background-color: var(--laranja-claro);
+}
+
+/* Resultado */
+.resultado {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+#loading {
+    display: none;
+    margin-top: 2em;
+}
+
+/* Barra de Progresso */
+.barraCarregando {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.barraCarregando::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 0;
+    background-color: var(--roxo);
+    border-radius: 5px;
+    animation: progress 3s forwards;
+}
+
+@keyframes progress {
+    to {
+        width: 100%;
+    }
+}
+
+
+/* Seção Direita */
+.secao-direita {
+    width: 50%;
+    height: 40%;
+    padding: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: right;
+    color: #fff;
+    background-color: var(--laranja);
+    border-radius: 1em 0 1em;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.secao-direita:hover {
+    transition: all 1s;
+    transform: translateY(-1em);
+    background-color: #ff7b07;
+    border-radius: 0 1em;
+}
+
+.secao-direita h1 {
+    margin-bottom: 1em;
+}
