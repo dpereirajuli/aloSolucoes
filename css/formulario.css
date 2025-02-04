@@ -402,12 +402,14 @@ html {
     left: 10px;
     background-color: var(--laranja);
     width: 2.2em;
+    height: 2em;
 }
 
 .sliders-carousel button.next {
     right: 10px;
     background-color: var(--laranja);
     width: 2.2em;
+    height: 2em;
 
 }
 
