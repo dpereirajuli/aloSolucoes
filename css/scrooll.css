@@ -8,14 +8,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Cor de fundo da área da barra de scroll */
+    background: #ffffff; /* Cor de fundo da área da barra de scroll */
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
     background: var(--laranja); /* Cor laranja da barra de scroll */
     border-radius: 10px;
-    border: 3px solid #f1f1f1; /* Borda ao redor da barra de scroll */
+    border: 3px solid #ffffff; /* Borda ao redor da barra de scroll */
 }
 
 ::-webkit-scrollbar-thumb:hover {
