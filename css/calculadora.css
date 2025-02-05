@@ -3,9 +3,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50em;
+    height: auto; /* Alterado para auto para se ajustar ao conteúdo */
     flex-direction: row;
     justify-content: space-around;
+    padding: 20px; /* Adicionado padding para espaçamento */
+    flex-wrap: wrap; /* Permite que os elementos quebrem para a próxima linha */
+    margin-top: 10%;
+    background-color: #e0e0e0;
 }
 
 /* Container */
@@ -15,12 +19,14 @@
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     text-align: center;
-    width: 320px;
-    height: 24em;
+    width: 100%; /* Alterado para 100% para se ajustar ao container */
+    max-width: 320px; /* Limita a largura máxima */
+    height: auto; /* Altura ajustável ao conteúdo */
     display: flex;
     justify-content: center;
     flex-direction: column;
     justify-content: space-evenly;
+    margin-bottom: 20px; /* Adicionado margem inferior para espaçamento */
 }
 
 /* Título */
@@ -104,21 +110,22 @@
     }
 }
 
-
 /* Seção Direita */
 .secao-direita {
-    width: 50%;
-    height: 40%;
-    padding: 4%;
+    width: 100%; /* Alterado para 100% para se ajustar ao container */
+    max-width: 600px; /* Limita a largura máxima */
+    height: auto; /* Altura ajustável ao conteúdo */
+    padding: 20px; /* Reduzido o padding para dispositivos móveis */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    text-align: right;
+    text-align: center; /* Alterado para center para melhor legibilidade em mobile */
     color: #fff;
     background-color: var(--laranja);
-    border-radius: 1em 0 1em;
+    border-radius: 1em;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-bottom: 20px; /* Adicionado margem inferior para espaçamento */
 }
 
 .secao-direita:hover {
@@ -130,4 +137,54 @@
 
 .secao-direita h1 {
     margin-bottom: 1em;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .saque-aniversario {
+        flex-direction: column; /* Altera a direção para coluna em telas menores */
+        height: auto;
+        padding: 10px; /* Reduz o padding para telas menores */
+    }
+
+    .calculadora-div {
+        width: 90%; /* Ajusta a largura para 90% da tela */
+        max-width: none; /* Remove a largura máxima */
+    }
+
+    .secao-direita {
+        width: 90%; /* Ajusta a largura para 90% da tela */
+        max-width: none; /* Remove a largura máxima */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .secao-direita h1 {
+        font-size: 1.2em; 
+    }
+
+    .secao-direita p {
+        font-size: 0.9em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 1.2em; 
+    }
+
+    .label {
+        font-size: 0.9em; 
+    }
+
+    .valorSaldo {
+        font-size: 0.9em; 
+    }
+
+    .botao-calcular {
+        font-size: 0.9em; 
+    }
+
+    .resultado {
+        font-size: 1em; 
+    }
 }
