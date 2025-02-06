@@ -1,0 +1,60 @@
+.section-credito {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/img/fundoCredito.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.content-credito {
+    max-width: 600px;
+    width: 100%;
+    margin-left: 10%;
+}
+
+.section-credito h2 {
+    font-size: 2rem;
+    color: var(--laranja);
+    background-color: white;
+    margin-bottom: 05%;
+}
+
+.section-credito h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+}
+
+.section-credito p {
+    font-size: 1.5rem;
+    color: #28a745;
+    background-color: white;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 1020px) {
+    .section-credito {
+        background-position: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-credito {
+        margin-left: 0;
+    }
+    .section-credito h1 {
+        font-size: 3rem;
+    }
+
+    .section-credito h2 {
+        font-size: 1.5rem;
+    }
+
+}
+

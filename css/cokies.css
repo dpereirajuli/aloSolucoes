@@ -11,12 +11,14 @@
   align-items: center;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  height: 6em;
+  height: auto; /* Altura automática para se ajustar ao conteúdo */
+  flex-wrap: wrap; /* Permite que os elementos quebrem para a próxima linha em telas menores */
 }
 
 .cookie-consent p {
   margin: 0;
   font-size: 14px;
+  flex: 1 1 60%; /* Ocupa 60% da largura em desktop */
 }
 
 .cookie-consent a {
@@ -30,8 +32,9 @@
 
 .cookie-buttons {
   display: flex;
-  height: 2.5em;
+  height: auto; /* Altura automática para se ajustar ao conteúdo */
   gap: 1em;
+  flex: 1 1 auto; /* Permite que os botões se ajustem ao espaço disponível */
 }
 
 .cookie-buttons button {
@@ -40,6 +43,8 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
+  flex: 1; /* Faz com que os botões ocupem o espaço disponível */
+  max-width: 120px; /* Define um tamanho máximo para os botões no desktop */
 }
 
 #accept-all,
@@ -53,4 +58,42 @@
   transition: all 0.2s;
   background-color: var(--laranja);
   color: #ffffff;
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+  .cookie-consent {
+    padding: 15px; /* Reduz o padding em telas menores */
+  }
+
+  .cookie-consent p {
+    font-size: 12px; /* Reduz o tamanho da fonte em telas menores */
+    flex: 1 1 100%; /* Ocupa a largura total em telas pequenas */
+    margin-bottom: 10px; /* Adiciona espaço entre o texto e os botões */
+  }
+
+  .cookie-buttons {
+    flex-direction: column; /* Coloca os botões em uma coluna em telas pequenas */
+    gap: 0.5em; /* Reduz o espaço entre os botões */
+  }
+
+  .cookie-buttons button {
+    width: 100%; /* Faz com que os botões ocupem a largura total */
+    padding: 10px; /* Aumenta o padding para facilitar o toque em dispositivos móveis */
+    max-width: none; /* Remove o limite de largura em mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .cookie-consent {
+    padding: 10px; /* Reduz ainda mais o padding em telas muito pequenas */
+  }
+
+  .cookie-consent p {
+    font-size: 11px; /* Reduz o tamanho da fonte para telas muito pequenas */
+  }
+
+  .cookie-buttons button {
+    font-size: 12px; /* Reduz o tamanho da fonte dos botões */
+  }
 }

@@ -156,3 +156,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateProgress(); // Inicializar progresso corretamente
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelector(".slides");
+    const prevButton = document.querySelector(".prev");
+    const nextButton = document.querySelector(".next");
+    const totalSlides = document.querySelectorAll(".slide").length;
+    let currentIndex = 0;
+
+    // Função para mover o carrossel
+    function moveCarousel(index) {
+        if (index < 0 || index >= totalSlides) return; // Evita índices inválidos
+        currentIndex = index;
+        const offset = -currentIndex * 100;
+        slides.style.transform = `translateX(${offset}%)`;
+    }
+
+    // Evento para o botão "Anterior"
+    prevButton.addEventListener("click", () => {
+        if (currentIndex > 0) {
+            moveCarousel(currentIndex - 1);
+        }
+    });
+
+    // Evento para o botão "Próximo"
+    nextButton.addEventListener("click", () => {
+        if (currentIndex < totalSlides - 1) {
+            moveCarousel(currentIndex + 1);
+        }
+    });
+
+    // Inicializa o carrossel no primeiro slide
+    moveCarousel(0);
+});

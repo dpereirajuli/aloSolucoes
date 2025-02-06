@@ -1,19 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-
-body,
-html {
-    height: 100%;
-}
 
 .main-container {
     display: flex;
     height: 100vh;
-    margin-top: 10em;
+
 }
 
 .main-container p {
@@ -85,6 +74,7 @@ html {
     font-size: 2rem;
 }
 
+/* Estilos gerais do formulário */
 #contact-form {
     display: flex;
     flex-direction: column;
@@ -92,13 +82,7 @@ html {
     gap: 1rem;
     max-width: 500px;
     margin: 0 auto;
-}
-
-#contact-form input {
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
+    width: 100%; /* Garante que o formulário ocupe a largura total */
 }
 
 .campos-form {
@@ -106,11 +90,42 @@ html {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    max-width: 500px;
+    width: 100%; /* Garante que o contêiner ocupe a largura total */
 }
 
 .campos-form input {
-    width: 150%;
+    width: 100%; /* Inputs ocupam 100% da largura do contêiner */
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .form-section {
+        padding: 10px; /* Reduz o padding em telas menores */
+    }
+
+    #contact-section .form-container {
+        width: 90%; /* Reduz a largura do contêiner do formulário */
+        padding: 20px; /* Reduz o padding interno */
+    }
+
+    .campos-form input {
+        padding: 0.6rem; /* Reduz o padding dos inputs */
+        font-size: 0.9rem; /* Reduz o tamanho da fonte */
+ 
+    }
+
+    .contact-form-wrapper h2 {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte do título */
+    }
+
+    .terms-section {
+        font-size: 0.6rem; /* Reduz o tamanho da fonte dos termos */
+
+    }
 }
 
 @keyframes erroSlide {

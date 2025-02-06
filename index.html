@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/card.css">
     <link rel="stylesheet" href="/css/slide.css">
+    <link rel="stylesheet" href="/css/credito.css">
     <link rel="stylesheet" href="/css/formulario.css">
     <link rel="stylesheet" href="/css/emprestimoFgts.css">
     <link rel="stylesheet" href="/css/FAQ.css">
@@ -121,7 +122,7 @@
     </script>
 
 
-    <section class="emprestimo-fgts" id="saque-fgts">
+    <section class="emprestimo-fgts">
         <div class="container">
             <h2>Empréstimo FGTS</h2>
             <p class="taxa">Taxas a partir de <strong>1,29% a.m.</strong></p>
@@ -137,7 +138,7 @@
 
 
     <!---aqui começa o código do texto com um carrosel de imagens-->
-    <div class="section-carrossel" id="planos">
+    <div class="section-carrossel" id="saque-fgts">
         <div class="text-content">
             <p
                 style="background-color: #fee2e2; display: inline-block; padding: 5px 10px; border-radius: 20px; color: #f97316;">
@@ -151,7 +152,7 @@
                 <p><span>1.</span> Optar pelo Saque-Aniversário.</p>
                 <p><span>2.</span> Autorizar o banco a consultar seus dados e valores do FGTS.</p>
                 <p><span>3.</span> Simular e, se estiver de acordo, aguardar aprovação.</p>
-                <p><span>4.</span> Dinheiro na conta para usar como quiser.</p>
+                <p><span>4.</span> Dinheiro na conta em até 3 horas para usar como quiser.</p>
             </div>
             <a href="#simulacao" class="button">Simular antecipação FGTS</a>
         </div>
@@ -169,6 +170,19 @@
         </div>
     </div>
 
+
+
+    <!-- Credito  -->
+    <section class="section-credito">
+        <div class="content-credito">
+            <h2>CREDITO FUNCIONARIO PUBLICO</h2>
+            <h1>Aqui consigo</h1>
+            <h1>um credito</h1>
+            <h1>num estalar</h1>
+            <h1>de dedos</h1>
+            <p>Credito em 24 horas</p>
+        </div>
+    </section>
 
 
 
@@ -267,9 +281,9 @@
 
                 <!-- Próxima Etapa -->
                 <div id="next-step-section">
-                    <h2>Empréstimo simples, fácil e rápido.</h2>
+                    <h2>Está quase lá</h2>
                     <h3>Olá, <span class="highlight" id="user-name"></span></h3>
-                    <p>Você já conhece o Saque-Aniversário FGTS?</p>
+                    <p>Confirme a autorização no App e <br> clique em  <span class="highlight">'FINALIZAR'.</span> Nossa equipe entrará em contato em breve.</p>
                     <p class="highlight">Você está em ambiente seguro</p>
 
                     <!-- Carrossel de Slides -->
@@ -277,18 +291,33 @@
                         <div class="slides">
                             <div class="slide">
                                 <img src="/img/step-1.png" alt="Slide 1">
-                                <h4>Passo 1: Acesse o App</h4>
-                                <p>Abra o app FGTS Calxa no seu celular e faça o login com o seu CPF.</p>
+                                <h4>Passo 1: Acesse o app FGTS</h4>
+                                <p>Baixe o app FGTS no seu celular, faça o login com o seu CPF.</p>
                             </div>
                             <div class="slide">
                                 <img src="/img/step-2.png" alt="Slide 2">
-                                <h4>Passo 2: Ative o Saque-Aniversário</h4>
-                                <p>Siga as instruções no app para ativar o Saque-Aniversário.</p>
+                                <h4>Passo 2: Aderir ao Saque-Aniversário</h4>
+                                <p>Após fazer o login, clique em 'Sistemática de saque do seu FGTS'.</p>
                             </div>
                             <div class="slide">
                                 <img src="/img/step-3.png" alt="Slide 3">
                                 <h4>Passo 3: Autorize o Banco Bing</h4>
-                                <p>Autorize o Banco Bing a consultar o seu saldo no app.</p>
+                                <p>Escolha a opção 'Modalidade Saque-Aniversário', marque os termos e clique em 'Optar pelo Saque-Aniversário'.</p>
+                            </div>
+                            <div class="slide">
+                                <img src="/img/step-4.png" alt="Slide 3">
+                                <h4>Passo 4: Modalidade Saque-Aniversário</h4>
+                                <p>Na tela inicial, clique em 'Sistemática de saque do seu FGTS', depois 'Empréstimo Saque-aniversário' e então 'Autorizar consulta de dados'.</p>
+                            </div>
+                            <div class="slide">
+                                <img src="/img/step-6.png" alt="Slide 3">
+                                <h4>Passo 5: Autorizar consulta FGTS</h4>
+                                <p>Clique em 'Adicionar instituição', e busque por 'QI SOCIEDADE e DELCRED SOCIEDADE' e selecione.</p>
+                            </div>
+                            <div class="slide">
+                                <img src="/img/step-7.png" alt="Slide 3">
+                                <h4></h4>
+                                <p>Clique no botão 'Simular antecipação FGTS' ou pelo botão do whatsapp</p>
                             </div>
                         </div>
 
@@ -303,14 +332,13 @@
                             </button>
                         </div>
                     </div>
-
             </section>
         </div>
     </div>
 
     <section class="saque-aniversario">
         <div class="calculadora-div">
-            <h1 class="titulo">Calculadora de Saque-Aniversário FGTS</h1>
+            <h1 class="titulo">Calcule seu FGTS de forma rápida e fácil! </h1>
 
             <div class="input-calculadora-div">
                 <label for="saldo" class="label">Informe seu saldo do FGTS:</label>
@@ -327,14 +355,16 @@
         </div>
 
         <div class="secao-direita" id="calculadora">
-            <h1>Para Que Serve a Calculadora de Saque-Aniversário FGTS: </h1>
-            <p>A Calculadora de Saque-Aniversário FGTS é uma ferramenta prática e intuitiva que ajuda você a estimar
-                quanto pode sacar do seu Fundo de Garantia por Tempo de Serviço (FGTS) através da modalidade
-                Saque-Aniversário. Com ela, você insere o saldo disponível na sua conta FGTS e descobre, de forma rápida
-                e clara, o valor aproximado que pode retirar anualmente, conforme as regras estabelecidas pelo governo.
-                Ideal para planejar suas finanças e aproveitar melhor os recursos disponíveis!</p>
+            <h1>Seu futuro financeiro começa aqui!</h1>
+            <p>Com a nossa Calculadora, você pode descobrir o valor que pode ser sacado . Basta inserir informações como o saldo de seu FGTS, e o sistema faz o restante para você.</p>
+            <br>
+            <p>✔️ Praticidade: Cálculos instantâneos, sem complicações.
+            <br>✔️ Planejamento: Saiba quanto você tem direito e organize suas finanças com antecedência.</p>
         </div>
     </section>
+
+
+
     <!-- Faq de perguntas e respostas. -->
     <section class="faq" id="faqs">
         <h2>FAQ - Empréstimo Consignado</h2>
@@ -396,20 +426,7 @@
                 </ul>
             </div>
         </div>
-
-        <!-- Adicione mais perguntas e respostas aqui -->
     </section>
-
-    <!--JS Faq de perguntas e respostas. -->
-    <script>
-        document.querySelectorAll('.accordion').forEach(button => {
-            button.addEventListener('click', () => {
-                const faqItem = button.closest('.faq-item');
-                faqItem.classList.toggle('active');
-            });
-        });
-
-    </script>
 
 
     <!---- Cookies ---->
@@ -466,8 +483,8 @@
             <div class="footer-section contact">
                 <h4 class="footer-title">Contato</h4>
                 <ul class="footer-list">
-                    <li><i class="fas fa-map-marker-alt"></i> Rua Exemplo, 123 - São Paulo, SP</li>
-                    <li><i class="fas fa-phone"></i> (11) 1234-5678</li>
+                    <li><i class="fas fa-phone"></i>(11) 95488 - 9545</li>
+                    <li><i class="fas fa-phone"></i>(11) 96815 - 4480</li>
                     <li><i class="fas fa-envelope"></i> contato@alosolucoes.com.br</li>
                 </ul>
             </div>
@@ -491,6 +508,8 @@
     <script src="/js/cookie.js"></script>
     <script src="/js/scrooll.js"></script>
     <script src="/js/navbarAnimation.js"></script>
+    <script src="/js/FAQ.js"></script>
+ 
 
 
 </body>

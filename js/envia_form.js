@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Mensagem para WhatsApp
         const mensagemWhatsApp = `Nome: ${nome}\nE-mail: ${email}\nTelefone: ${telefone}\nCPF: ${cpf}`;
-        const urlWhatsApp = `https://wa.me/5511999999999?text=${encodeURIComponent(mensagemWhatsApp)}`;
+        const urlWhatsApp = `https://wa.me/5511954889545?text=${encodeURIComponent(mensagemWhatsApp)}`;
 
         // Abrir WhatsApp
         window.open(urlWhatsApp, '_blank');

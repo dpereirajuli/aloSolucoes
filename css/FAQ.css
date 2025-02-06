@@ -1,13 +1,8 @@
 .faq {
     max-width: 800px;
-    height: 40em;
     width: 100%;
     margin: 0 auto;
     padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     font-family: Arial, sans-serif;
 }
 
@@ -15,7 +10,10 @@
     text-align: center;
     color: #2c3e50;
     margin-bottom: 2rem;
-    margin-bottom: 2em;
+}
+
+.faq-item {
+    margin-bottom: 1rem; /* Espaço entre os itens */
 }
 
 .accordion {
@@ -43,12 +41,23 @@
 }
 
 .resposta {
-    max-height: 0;
+    height: 0; /* Inicialmente fechado */
     overflow: hidden;
-    transition: max-height 0.3s linear;
+    transition: height 0.3s ease, padding 0.3s ease;
     padding: 0 1.2rem;
     background: white;
     border-radius: 0 0 6px 6px;
+}
+
+/* Classe ativa (aberta) */
+.faq-item.active .resposta {
+    height: auto; /* Ajusta a altura conforme o conteúdo */
+    padding: 1rem 1.2rem;
+}
+
+/* Rotação da seta */
+.faq-item.active .arrow {
+    transform: rotate(180deg);
 }
 
 #documentos-faq {
@@ -57,35 +66,6 @@
 
 #documentos-faq li {
     padding: 0.3em;
-}
-
-/* Ajuste para melhorar a transição */
-/* Ajuste para melhorar a transição */
-.faq-item .resposta {
-    transform: scaleY(0); /* Inicialmente "fechado" */
-    transform-origin: top; /* Alinha a transição de cima para baixo */
-    overflow: hidden;
-    transition: transform 0.3s ease, padding 0.3s ease;
-    padding: 0 1.2rem;
-    background: white;
-    border-radius: 0 0 6px 6px;
-}
-
-/* Classe ativa (aberta) */
-.faq-item.active .resposta {
-    transform: scaleY(1); /* Abre a resposta */
-    padding: 1rem 1.2rem;
-}
-
-/* Modificação para a rotação da seta */
-.faq-item.active .arrow {
-    transform: rotate(180deg);
-}
-
-
-.faq-item.active .resposta {
-    max-height: 700px; /* Ajuste conforme necessário */
-    padding: 1rem 1.2rem;
 }
 
 @media (max-width: 768px) {
