@@ -3,10 +3,11 @@
     justify-content: left;
     align-items: center;
     height: 100vh;
-    background-image: url('/img/fundoCredito.svg');
+    background-image: url('/img/fundoCredito.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    background-position-x: 0%;
     text-align: center;
 }
 
@@ -40,7 +41,7 @@
 /* Responsividade */
 @media (max-width: 1020px) {
     .section-credito {
-        background-position: 80%;
+        background-position-x: 80%;
     }
 }
 
