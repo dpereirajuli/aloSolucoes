@@ -9,6 +9,7 @@
     padding: 20px; /* Adicionado padding para espaçamento */
     flex-wrap: wrap; /* Permite que os elementos quebrem para a próxima linha */
     margin-top: 10%;
+    height: 40em;
     background-color: #e0e0e0;
 }
 

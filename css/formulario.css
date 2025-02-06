@@ -302,9 +302,9 @@ html {
 }
 
 
-.progress {
+.barraDeAvancoProgresso {
     height: 10px;
-    background-color: #ff8c42;
+    background-color: var(--laranja);
     width: 0%;
     border-radius: 5px;
     transition: width 0.3s ease;
