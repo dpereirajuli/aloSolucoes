@@ -2,7 +2,7 @@
 .main-container {
     display: flex;
     height: 100vh;
-
+    overflow-y: hidden;
 }
 
 .main-container p {
@@ -13,6 +13,7 @@
     width: 45%;
     background: url('/img/esq-img.png') no-repeat center center;
     background-size: cover;
+
 }
 
 .form-section {
@@ -22,7 +23,7 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: #ffffff86;
+    background-color: #f9f9f9; /* Fundo claro */
 }
 
 /* Ajustes para dispositivos móveis */

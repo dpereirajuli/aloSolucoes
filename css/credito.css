@@ -22,6 +22,7 @@
     color: var(--laranja);
     background-color: white;
     margin-bottom: 05%;
+    border: 1px solid rgb(233, 112, 0);
 }
 
 .section-credito h1 {
@@ -36,6 +37,25 @@
     background-color: white;
     padding: 5px;
     margin-top: 10px;
+    border: 1px solid rgb(233, 112, 0);
+}
+
+.icon-credito{
+    margin: 50px auto;
+}
+
+.icon-credito img{
+    background-color: white;
+    border-radius: 25%;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgb(233, 112, 0);
+    transition: scale, transform 0.1s linear;
+}
+
+.icon-credito img:hover{
+    scale: 1.1;
+    transform: translateY(-5px);
 }
 
 /* Responsividade */

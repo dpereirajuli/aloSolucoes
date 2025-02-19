@@ -87,6 +87,7 @@ nav a:hover {
 }
 
 
+
 /**inicio hero content**/
 .hero {
     display: flex;
@@ -123,7 +124,6 @@ nav a:hover {
     gap: 1.5rem;
     justify-content: center;
     animation: fadeInUp 1.5s ease-out;
-    flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha em telas pequenas */
 }
 
 .hero-buttons a {
@@ -132,9 +132,6 @@ nav a:hover {
     font-size: 1rem;
     font-weight: 600;
     transition: all 0.3s ease;
-    width: 100%; /* Faz os botões ocuparem a largura total em telas pequenas */
-    max-width: 200px; /* Define uma largura máxima para os botões */
-    text-align: center; /* Centraliza o texto dentro dos botões */
 }
 
 /**btn ctz dentro da hero content**/
@@ -160,7 +157,7 @@ nav a:hover {
 .hero-buttons .cta-primary:active {
     transform: translate(0.05em, 0.05em);
     box-shadow: 0.05em 0.05em;
-}
+  }
 
 .hero-buttons .cta-secondary {
     align-items: center;
@@ -168,7 +165,7 @@ nav a:hover {
     color: #fff;
     cursor: pointer;
     display: flex;
-    font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.5;
@@ -177,7 +174,6 @@ nav a:hover {
     outline: 0;
     border: 0;
     padding: 1rem;
-    justify-content: center; /* Centraliza o conteúdo do botão */
 }
 
 .hero-buttons .cta-secondary:before {
@@ -186,10 +182,10 @@ nav a:hover {
     display: inline-block;
     height: 1px;
     margin-right: 10px;
-    transition: all .42s cubic-bezier(.25, .8, .25, 1);
+    transition: all .42s cubic-bezier(.25,.8,.25,1);
     width: 0;
 }
-
+  
 .hero-buttons .cta-secondary:hover:before {
     background-color: #fff;
     width: 3rem;
@@ -201,37 +197,6 @@ nav a:hover {
     margin-top: 2rem;
     animation: float 3s ease-in-out infinite;
 }
-
-/* Media Queries para Responsividade */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem; /* Reduz o tamanho do título em telas menores */
-    }
-
-    .hero p {
-        font-size: 1.2rem; /* Reduz o tamanho do parágrafo em telas menores */
-    }
-
-    .hero-buttons a {
-        padding: 0.6rem 1.2rem; /* Ajusta o padding dos botões em telas menores */
-        font-size: 0.9rem; /* Reduz o tamanho da fonte dos botões */
-    }
-} 
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 1.5rem; /* Tamanho do título ainda menor para dispositivos muito pequenos */
-    }
-
-    .hero p {
-        font-size: 1rem; /* Tamanho do parágrafo reduzido para melhor legibilidade */
-    }
-
-    .hero-buttons a {
-        padding: 0.5rem 1rem; /* Ajusta o padding dos botões para telas muito pequenas */
-        font-size: 0.8rem; /* Tamanho da fonte dos botões ainda menor */
-    }
-}
-
 
 @keyframes float {
     0%, 100% {
@@ -363,13 +328,14 @@ nav a:hover {
 
     nav a{
         font-size: 1.3rem;
+        color: white;
     }
 
     nav.active {
         display: flex;
         opacity: 1;
         max-height: 500px;
-        background: rgba(255, 255, 255, 0.768); /* Cor do fundo com opacidade */
+        background: rgba(255, 123, 0, 0.747); /* Cor do fundo com opacidade */
         backdrop-filter: blur(10px);
     }
 
