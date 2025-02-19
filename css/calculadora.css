@@ -1,0 +1,190 @@
+/* Seção Principal */
+.saque-aniversario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Alterado para auto para se ajustar ao conteúdo */
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px; /* Adicionado padding para espaçamento */
+    flex-wrap: wrap; /* Permite que os elementos quebrem para a próxima linha */
+    height: 40em;
+    background-color: #f9f9f9; /* Fundo claro */
+}
+
+/* Container */
+.calculadora-div {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
+    width: 100%; /* Alterado para 100% para se ajustar ao container */
+    max-width: 320px; /* Limita a largura máxima */
+    height: auto; /* Altura ajustável ao conteúdo */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 20px; /* Adicionado margem inferior para espaçamento */
+}
+
+/* Título */
+.titulo {
+    font-size: 1.5em;
+    color: #333;
+}
+
+/* Campo de Entrada */
+.input-calculadora-div {
+    margin: 15px 0;
+}
+
+.label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.valorSaldo {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Botão */
+.botao-calcular {
+    background-color: var(--laranja);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.botao-calcular:hover {
+    background-color: var(--laranja-claro);
+}
+
+/* Resultado */
+.resultado {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+#loading {
+    display: none;
+    margin-top: 2em;
+}
+
+/* Barra de Progresso */
+.barraCarregando {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.barraCarregando::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 0;
+    background-color: var(--roxo);
+    border-radius: 5px;
+    animation: progress 3s forwards;
+}
+
+@keyframes progress {
+    to {
+        width: 100%;
+    }
+}
+
+/* Seção Direita */
+.secao-direita {
+    width: 100%; /* Alterado para 100% para se ajustar ao container */
+    max-width: 600px; /* Limita a largura máxima */
+    height: auto; /* Altura ajustável ao conteúdo */
+    padding: 20px; /* Reduzido o padding para dispositivos móveis */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center; /* Alterado para center para melhor legibilidade em mobile */
+    color: #fff;
+    background-color: var(--laranja);
+    border-radius: 1em;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-bottom: 20px; /* Adicionado margem inferior para espaçamento */
+}
+
+.secao-direita:hover {
+    transition: all 1s;
+    transform: translateY(-1em);
+    background-color: #ff7b07;
+    border-radius: 0 1em;
+}
+
+.secao-direita h1 {
+    margin-bottom: 1em;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .saque-aniversario {
+        flex-direction: column; /* Altera a direção para coluna em telas menores */
+        height: auto;
+        padding: 10px; /* Reduz o padding para telas menores */
+    }
+
+    .calculadora-div {
+        width: 90%; /* Ajusta a largura para 90% da tela */
+        max-width: none; /* Remove a largura máxima */
+    }
+
+    .secao-direita {
+        width: 90%; /* Ajusta a largura para 90% da tela */
+        max-width: none; /* Remove a largura máxima */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .secao-direita h1 {
+        font-size: 1.2em; 
+    }
+
+    .secao-direita p {
+        font-size: 0.9em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 1.2em; 
+    }
+
+    .label {
+        font-size: 0.9em; 
+    }
+
+    .valorSaldo {
+        font-size: 0.9em; 
+    }
+
+    .botao-calcular {
+        font-size: 0.9em; 
+    }
+
+    .resultado {
+        font-size: 1em; 
+    }
+}

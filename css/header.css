@@ -1,0 +1,364 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    line-height: 1.5;
+}
+
+
+/**inicio navbar**/
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    color: var(--laranja);
+}
+
+.logo img {
+    width: 100px;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+nav a {
+    color: var(--cinza-claro);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--laranja-escura);
+    transform: scale(1.05);
+}
+
+
+/**btn cta dentro da nav bar**/
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.cta-buttons a {
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .cta-primary {
+    background-color: var(--laranja);
+    color: white;
+    padding: 0.2rem 0.7rem;
+    border: 2px solid var(--laranja);
+}
+
+.navbar .cta-primary:hover{
+    background-color: white;
+    color: var(--laranja);
+    border: 2px solid var(--laranja);
+}
+
+
+.navbar  .cta-secondary {
+    color: var(--laranja);
+    background-color: white;
+    border: 2px solid var(--laranja);
+    padding: 0.2rem 0.7rem;
+}
+
+.navbar  .cta-secondary:hover {
+    background-color: var(--laranja);
+    color: white;
+    border: 2px solid var(--laranja);
+}
+
+
+
+/**inicio hero content**/
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--laranja);
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero h1 span {
+    color: var(--roxo);
+    animation: colorChange 3s infinite alternate;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-buttons a {
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/**btn ctz dentro da hero content**/
+.hero-buttons .cta-primary {
+    background: var(--roxo);
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid var(--laranja);
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+.hero-buttons .cta-primary:hover {
+    transform: translate(-0.10em, -0.10em);
+    box-shadow: 0.15em 0.15em;
+}
+
+.hero-buttons .cta-primary:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+  }
+
+.hero-buttons .cta-secondary {
+    align-items: center;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: 0;
+    border: 0;
+    padding: 1rem;
+}
+
+.hero-buttons .cta-secondary:before {
+    background-color: #fff;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    margin-right: 10px;
+    transition: all .42s cubic-bezier(.25,.8,.25,1);
+    width: 0;
+}
+  
+.hero-buttons .cta-secondary:hover:before {
+    background-color: #fff;
+    width: 3rem;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 2rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: var(--roxo);
+    }
+    50% {
+        color: #8618b2;
+    }
+    100% {
+        color: var(--roxo);
+    }
+}
+
+
+
+
+
+/**inicio serviços**/
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background-color: white;
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.features h1 {
+    flex: 1 1 100%; /* Ocupa 100% da largura e força uma nova linha */
+    margin-bottom: 2rem; /* Espaçamento abaixo do título */
+    font-size: 2.5rem; /* Tamanho do título */
+    color: var(--cor-primaria); /* Cor do título (substitua pela sua variável de cor) */
+}
+
+.feature {
+    border-radius: 15px;
+    border: 0.5px solid var(--cinza-claro);
+    padding: 2rem;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--cinza-claro);
+}
+
+
+
+.hero-image {
+    margin-top: 2rem;
+    width: 90%;
+    max-width: 600px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+
+    .hero {
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: left;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero-image {
+        margin-top: 0;
+        max-width: 40%;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        position: absolute;
+        justify-content: space-evenly;
+        top: 100px;
+        right: 0;
+        background-color: var(--roxo-escuro);
+        width: 100%;
+        z-index: 1000;
+        transition: max-height 0.8s ease, opacity 0.8s ease;
+        opacity: 0;
+        max-height: 0;
+        padding: 7vh 0;
+        gap: 30px;
+    }
+
+    nav a{
+        font-size: 1.3rem;
+        color: white;
+    }
+
+    nav.active {
+        display: flex;
+        opacity: 1;
+        max-height: 500px;
+        background: rgba(255, 123, 0, 0.747); /* Cor do fundo com opacidade */
+        backdrop-filter: blur(10px);
+    }
+
+    .hamburger {
+        display: block;
+    }
+    
+    header{
+        line-height: 1;
+    }
+
+    .hero h1 {
+        font-size:2rem;
+        margin-bottom: 10px;
+    }
+
+    .hero-buttons {
+        justify-content: space-around;
+    }
+
+    .hero-buttons a{
+        font-size: 0.8rem;
+        padding: 0.8rem 1rem;
+        border-radius: 15px;
+    }
+}

@@ -34,10 +34,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
+    <!--font-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
+    <!--animação do trigger-->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+    <!--animação com scrol quando chegar na visao do user-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 
 </head>
 
@@ -70,7 +76,7 @@
                 seu bolso e a agilidade que você merece.</p>
             <div class="hero-buttons">
                 <a href="#simulacao" class="cta-primary">Fazer simulação</a>
-                <a href="#fale" class="cta-secondary">Fale com o nosso time</a>
+                <a href="https://wa.me/5511954889545" target="_blank" class="cta-secondary">Fale com o nosso time</a>
             </div>
         </div>
         <img src="/img/hero-content.webp" alt="Homen relaxando com notebook" class="hero-image">
@@ -78,9 +84,10 @@
 
 
 
-    <section class="cards" id="services">
-        <h1>Crédito Rápido, Fácil e do Seu Jeito!</h1>
-        <div class="card">
+    <section  class="cards" id="services" >
+        <h1 data-aos="zoom-in-up">Crédito Rápido, Fácil e do Seu Jeito!</h1>
+
+        <div class="card" data-aos="zoom-in-left">
             <div class="card-details">
                 <p class="text-title">Crédito fácil, sonhos realizados</p>
                 <p class="text-body">Tenha acesso ao crédito que você precisa para transformar seus projetos em
@@ -89,7 +96,7 @@
             <button class="card-button">Mais informações</button>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in-right">
             <div class="card-details">
                 <p class="text-title">Emprestimos com taxas imbatíveis!</p>
                 <p class="text-body">Aproveite condições especiais para alcançar seus objetivos sem pesar no bolso.
@@ -98,7 +105,7 @@
             <button class="card-button">Mais informações</button>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in-left">
             <div class="card-details">
                 <p class="text-title">Faça o seu Emprestimo com o seu FGTS</p>
                 <p class="text-body">Utilize seu FGTS como garantia para obter condições exclusivas e conquistar o que
@@ -107,7 +114,7 @@
             <button class="card-button">Mais informações</button>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="zoom-in-right">
             <div class="card-details">
                 <p class="text-title">Dinheiro na conta em até 5 minutos.</p>
                 <p class="text-body">Precisando de dinheiro rápido? Conte com a agilidade que só a gente oferece para te
@@ -272,7 +279,7 @@
             <a href="#simulacao" class="button">Simular antecipação FGTS</a>
         </div>
 
-        <div class="slider">
+        <div class="slider" data-aos="fade-down-left">
             <img src="img/step-1.png" alt="Slide 1" class="slider-image">
             <div class="caption">
                 <h2 class="slider-title">Acesse o app FGTS</h2>
@@ -626,11 +633,12 @@
             <div class="footer-section links">
                 <h4 class="footer-title">Links Úteis</h4>
                 <ul class="footer-list">
-                    <li><a href="#sobre">Sobre Nós</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                    <li><a href="#politica">Política de Privacidade</a></li>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#saque-fgts">Saque FGTS</a></li>
+                    <li><a href="#calculadora">Calculadora</a></li>
+                    <li><a href="#faqs">FAQ's</a></li>
+                    <li><a href="#simulacao" class="cta-primary">Simule agora</a></li>
                 </ul>
             </div>
 
@@ -650,7 +658,16 @@
             <p>&copy; 2025 Alô Soluções Financeiras. Todos os direitos reservados.</p>
         </div>
     </footer>
-
+   
+    <!-- START Widget WhastApp -->
+    <a href="https://api.whatsapp.com/send?phone=5511954889545&text=Ola,%20vim%20pelo%20site" id="waurlsite" class="bt-whatsApp" target="_blank" style="right:25px; position:fixed;width:40px;height:40px;bottom:60px;z-index:100;">
+    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgdmlld0JveD0iMjYxOSA1MDYgMTIwIDEyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogIzI3ZDA0NTsKICAgICAgfQoKICAgICAgLmNscy0yLCAuY2xzLTUgewogICAgICAgIGZpbGw6IG5vbmU7CiAgICAgIH0KCiAgICAgIC5jbHMtMiB7CiAgICAgICAgc3Ryb2tlOiAjZmZmOwogICAgICAgIHN0cm9rZS13aWR0aDogNXB4OwogICAgICB9CgogICAgICAuY2xzLTMgewogICAgICAgIGZpbGw6ICNmZmY7CiAgICAgIH0KCiAgICAgIC5jbHMtNCB7CiAgICAgICAgc3Ryb2tlOiBub25lOwogICAgICB9CiAgICA8L3N0eWxlPjwvZGVmcz48ZyBkYXRhLW5hbWU9Ikdyb3VwIDM2IiBpZD0iR3JvdXBfMzYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIzMDAgNzMpIj48Y2lyY2xlIGNsYXNzPSJjbHMtMSIgY3g9IjYwIiBjeT0iNjAiIGRhdGEtbmFtZT0iRWxsaXBzZSAxOCIgaWQ9IkVsbGlwc2VfMTgiIHI9IjYwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzMTkgNDMzKSIvPjxnIGRhdGEtbmFtZT0iR3JvdXAgMzUiIGlkPSJHcm91cF8zNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjU0IDM4NikiPjxnIGRhdGEtbmFtZT0iR3JvdXAgMzQiIGlkPSJHcm91cF8zNCI+PGcgY2xhc3M9ImNscy0yIiBkYXRhLW5hbWU9IkVsbGlwc2UgMTkiIGlkPSJFbGxpcHNlXzE5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg5NCA3NSkiPjxjaXJjbGUgY2xhc3M9ImNscy00IiBjeD0iMzEuNSIgY3k9IjMxLjUiIHI9IjMxLjUiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNSIgY3g9IjMxLjUiIGN5PSIzMS41IiByPSIyOSIvPjwvZz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xNDI0LDE5MWwtNC42LDE2LjMsMTYuOS00LjcuOS01LjItMTEsMy41LDIuOS0xMC41WiIgZGF0YS1uYW1lPSJQYXRoIDEyNiIgaWQ9IlBhdGhfMTI2IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTMyNSAtNjgpIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTI2Niw5MGMwLS4xLDMuNS0xMS43LDMuNS0xMS43bDguNCw3LjlaIiBkYXRhLW5hbWU9IlBhdGggMTI3IiBpZD0iUGF0aF8xMjciIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTY1IDQzKSIvPjwvZz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xNDM5LjMsMTYwLjZhOS40LDkuNCwwLDAsMC0zLjksNi4xYy0uNSwzLjksMS45LDcuOSwxLjksNy45YTUwLjg3Niw1MC44NzYsMCwwLDAsOC42LDkuOCwzMC4xODEsMzAuMTgxLDAsMCwwLDkuNiw1LjEsMTEuMzc4LDExLjM3OCwwLDAsMCw2LjQuNiw5LjE2Nyw5LjE2NywwLDAsMCw0LjgtMy4yLDkuODUxLDkuODUxLDAsMCwwLC42LTIuMiw1Ljg2OCw1Ljg2OCwwLDAsMCwwLTJjLS4xLS43LTcuMy00LTgtMy44cy0xLjMsMS41LTIuMSwyLjYtMS4xLDEuNi0xLjksMS42LTQuMy0xLjQtNy42LTQuNGExNS44NzUsMTUuODc1LDAsMCwxLTQuMy02cy42LS43LDEuNC0xLjhhNS42NjQsNS42NjQsMCwwLDAsMS4zLTIuNGMwLS41LTIuOC03LjYtMy41LTcuOUExMS44NTIsMTEuODUyLDAsMCwwLDE0MzkuMywxNjAuNloiIGRhdGEtbmFtZT0iUGF0aCAxMjgiIGlkPSJQYXRoXzEyOCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEzMjYuMzMyIC02OC40NjcpIi8+PC9nPjwvZz48L3N2Zz4=" alt="" width="60px">
+    </a>
+    <span id="alertWapp" style="right:30px; visibility: hidden; position:fixed;	width:17px;	height:17px;bottom:90px; background:red;z-index:101; font-size:11px;color:#fff;text-align:center;border-radius: 50px; font-weight:bold;line-height: normal; "> 1 </span>
+    <div id="msg1" style="right: 90px; visibility: visible; background: #fff; color: #000; position: fixed; width: 200px; bottom: 52px; text-align: center; font-size: 13px; line-height: 31px; height: 32px; border-radius: 100px; z-index: 100;border: 1px solid #ccc; ">Fale conosco</div>
+    <script type="text/javascript">function showIt2() {document.getElementById("msg1").style.visibility = "visible";}    setTimeout("showIt2()", 5000); function hiddenIt() {document.getElementById("msg1").style.visibility = "hidden";}setTimeout("hiddenIt()", 15000); function showIt3() {document.getElementById("msg1").style.visibility = "visible";} setTimeout("showIt3()", 25000);  msg1.onclick = function() {document.getElementById('msg1').style.visibility = "hidden"; };function alertW() { document.getElementById("alertWapp").style.visibility = "visible";	} setTimeout("alertW()", 15000); </script>
+    <!-- END Widget WhastApp -->
+    
 
 
 
@@ -665,6 +682,12 @@
     <script src="/js/scrooll.js"></script>
     <script src="/js/navbarAnimation.js"></script>
     <script src="/js/FAQ.js"></script>
+
+    <!--js da animação do scroll quando chegar na visao do user-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
  
 
