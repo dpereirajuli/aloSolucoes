@@ -1,0 +1,107 @@
+
+        /* Container principal */
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        /* Título */
+        .about-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--laranja);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Subtítulo */
+        .about-subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Seção de conteúdo */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        /* Imagem */
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            max-width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Texto */
+        .about-text {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .about-text .highlight {
+            color: #e67e22;
+            font-weight: 600;
+        }
+
+        /* Botão de ação */
+        .about-cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .about-cta button {
+            background-color: var(--laranja);
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .about-cta button a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .about-cta button:hover {
+            background-color: var(--laranja-escura);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+
+            .about-title {
+                font-size: 2rem;
+            }
+
+            .about-subtitle {
+                font-size: 1rem;
+            }
+        }

@@ -38,6 +38,15 @@ nav a {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
+.navbar a.active {
+    color: #fff;
+    background-color: #f79401;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+
 nav a:hover {
     color: var(--laranja-escura);
     transform: scale(1.05);
@@ -50,6 +59,7 @@ nav a:hover {
     gap: 1rem;
 }
 
+
 .cta-buttons a {
     padding: 0.5rem 1.5rem;
     text-decoration: none;
@@ -60,7 +70,7 @@ nav a:hover {
 }
 
 .navbar .cta-primary {
-    background-color: var(--laranja);
+    background-color: var(--roxo);
     color: white;
     padding: 0.2rem 0.7rem;
     border: 2px solid var(--laranja);
